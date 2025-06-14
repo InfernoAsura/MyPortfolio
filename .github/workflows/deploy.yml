@@ -24,10 +24,12 @@ jobs:
       - name: Build site
         run: |
           nix build
+          mkdir -p _site
           cp -r result/* _site/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
-          branch: gh-pages 
+          branch: gh-pages
+          clean: true 
