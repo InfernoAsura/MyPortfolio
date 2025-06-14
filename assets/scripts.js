@@ -63,12 +63,12 @@ function setTheme() {
     if (userWantsDarkMode()) {
         document.documentElement.classList.add('dark');
         buttons.forEach(function(el) {
-            el.src = "/images/light-mode.svg";
+            el.src = "images/light-mode.svg";
         });
     } else {
         document.documentElement.classList.remove('dark');
         buttons.forEach(function(el) {
-            el.src = "/images/dark-mode.svg";
+            el.src = "images/dark-mode.svg";
         });
     }
 }
