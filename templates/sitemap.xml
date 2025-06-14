@@ -3,8 +3,8 @@
 $for(pages)$
 <url>
     <loc>$url$</loc>
-    <lastmod>$lastmod$</lastmod>
-    <priority>$priority$</priority>
+    $if(lastmod)$<lastmod>$lastmod$</lastmod>$endif$
+    $if(priority)$<priority>$priority$</priority>$endif$
 </url>
 $endfor$
 </urlset>
