@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/</loc>
+    <lastmod>2024-14-06</lastmod>
+    <priority>1.0</priority>
+</url>
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/pages/contact.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/pages/posts.html</loc>
+    
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/pages/projects.html</loc>
+    <lastmod>2025-01-25</lastmod>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/pages/projects/bigball.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://infernoasura.github.io/jeancharles.quillet/pages/projects/hscalendar.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <priority>0.8</priority>
+</url>
+
+</urlset>
