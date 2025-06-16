@@ -4,19 +4,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>Aditya.Mundhara - Contact</title>
+    <title>Aditya.Mundhara - bigball</title>
 
     <!-- For social icons-->
     <script src="https://kit.fontawesome.com/0c986e42a3.js"></script>
     <!-- Needed for bundle.min.*.js-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Code for the menu, theme and for generating toc -->
-    <script src="../assets/scripts.js"></script>
+    <script src="../../assets/scripts.js"></script>
 
     <!-- Main fonts for the site -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <link href="../assets/style.css" rel="stylesheet" type="text/css">
-    <link href="../assets/haddock.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/haddock.css" rel="stylesheet" type="text/css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-84WVQ2L5VD"></script>
@@ -39,7 +39,7 @@
 
         <div id="stamp">
           <h1 id="name">
-            <a href="../">
+            <a href="../../">
               <span class="emboldened">Aditya Mundhara</span>
             </a>
           </h1>
@@ -47,26 +47,26 @@
 
         <nav id="main-nav">
           <ul class="main">
-            <li><a href="../pages/posts.html">Posts</a></li>
-            <li><a href="../pages/projects.html">Projects</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../../pages/posts.html">Posts</a></li>
+            <li><a href="../../pages/projects.html">Projects</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
           </ul>
         </nav>
-        <img src="../images/dark-mode.svg" height="32" width="32" class="theme_btn">
+        <img src="../../images/dark-mode.svg" height="32" width="32" class="theme_btn">
 
         <div class="mobile-header">
             <nav id="mobile-nav">
                 <div class="menu"><a class="button">Menu</a>
                     <div class="container">
                         <ul class="main">
-                            <li><a href="../pages/posts.html">Posts</a></li>
-                            <li><a href="../pages/projects.html">Projects</a></li>
-                            <li><a href="../pages/contact.html">Contact</a></li>
+                            <li><a href="../../pages/posts.html">Posts</a></li>
+                            <li><a href="../../pages/projects.html">Projects</a></li>
+                            <li><a href="../../pages/contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <img src="../images/dark-mode.svg" height="32" width="32" class="theme_btn">
+            <img src="../../images/dark-mode.svg" height="32" width="32" class="theme_btn">
         </div>
 
       </header>
@@ -78,29 +78,34 @@
         <div class="entry-content">
           
 
-          <p>Feel free to contact me if you’d like to connect, collaborate, or just have a chat about technology and innovation at this address:
-<a href="mailto:mundhara.aditya5@gmail.com">mundhara.aditya5@gmail.com</a></p>
+          <h1 id="bigball"><a href="https://github.com/jecaro/bigball">bigball</a></h1>
+<p><a href="https://github.com/jecaro/bigball">bigball</a> was my second real life Haskell project. When I was working for
+<a href="https://www.scalian.com">Scalian</a>, we had this huge C++ project. Think about
+something with more than 300 subprojects (libraries or executables). It was
+tough dealing with such a huge code base and its complexity. There were a lot
+of inter dependencies between the projects, and we had no way to actually list
+them and view the dependency graph.</p>
+<p>We needed a tool to help us to handle all these dependencies.</p>
+<p>We were working with Microsoft Visual Studio. Its main file, also called the
+solution file, contains this graph. So this was just a matter of parsing this
+file, creating the dependency graph and for each project output a file with it.</p>
+<p>The software wasn’t very difficult to write. All the required libraries were
+available on <a href="https://hackage.haskell.org/">hackage</a>. My workmates were pretty
+happy with it, and it was quickly integrated in our CI.</p>
+<p>You can check it out on
+<a href="https://github.com/jecaro/bigball">github</a>.</p>
         </div>
 
         <!-- 
           
-        <div class="meta">
           
         
 
         
         
-            <div class="meta-component">
-                <i class="fas fa-code-branch fa-fw"></i>
-                <a href="https://github.com/InfernoAsura/jeancharles.quillet/tree/a2743c7" class="git-commit">
-                    a2743c7
-                </a>
-            </div>
-        
 
         
           
-        </div>
           
          -->
 
