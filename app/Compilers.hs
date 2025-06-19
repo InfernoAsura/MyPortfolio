@@ -152,7 +152,7 @@ rssCompiler = do
           feedDescription = "Aditya Mundhara's personal blog",
           feedAuthorName = "Aditya Mundhara",
           feedAuthorEmail = "mundhara.aditya5@gmail.com",
-          feedRoot = "https://infernoasura.github.io/jeancharles.quillet"
+          feedRoot = "https://infernoasura.github.io/"
         }
 
 pageCompiler :: Compiler (Item String)
@@ -237,7 +237,7 @@ urlCtx = field "url" url
       | otherwise = do
           r <- getRoute identifier
           pure $ root <> fromMaybe mempty r
-    root = "https://infernoasura.github.io/jeancharles.quillet/"
+    root = "https://infernoasura.github.io/"
 
 -- Strings and patterns
 
