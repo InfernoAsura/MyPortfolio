@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jeancharles.quillet.org/sitemap.xml
+Sitemap: https://infernoasura.github.io/MyPortfolio/sitemap.xml
 
