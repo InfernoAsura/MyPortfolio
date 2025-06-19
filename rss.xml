@@ -3,9 +3,9 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>All posts</title>
-        <link>https://infernoasura.github.io/jeancharles.quillet</link>
+        <link>https://infernoasura.github.io/</link>
         <description><![CDATA[Aditya Mundhara's personal blog]]></description>
-        <atom:link href="https://infernoasura.github.io/jeancharles.quillet/rss.xml" rel="self"
+        <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
                    type="application/rss+xml" />
         <lastBuildDate>Unknown</lastBuildDate>
         
