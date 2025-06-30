@@ -34,7 +34,7 @@ jobs:
       - name: Build and run site
         run: |
           cabal build site
-          ./dist-newstyle/build/*/*/site*/build/site/site build
+          $(cabal list-bin site) build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
