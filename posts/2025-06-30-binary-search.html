@@ -84,11 +84,10 @@
           <nav id="toc" class="right-toc"></nav>
           
 
-          <h1 id="binary-search">Binary Search</h1>
-<p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
+          <p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
 <h1 id="implementation-of-binary-search">Implementation of Binary Search</h1>
-<p>nums -&gt; the array itself
-Target -&gt; value to be searched in the array
+<p>nums -&gt; the array itself <br>
+Target -&gt; value to be searched in the array <br>
 n -&gt; size of the array</p>
 <p>Iterative</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> low <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> high <span class="op">=</span> nums<span class="op">.</span>size<span class="op">()</span> <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> mid <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
@@ -116,7 +115,7 @@ n -&gt; size of the array</p>
 which is a bad practice. As, the addition of low and high might cause overflow. The good practice is to do this
 <code>mid = ((high - low) / 2) + low</code></p>
 <h1 id="upper-bound-and-lower-bound">Upper Bound and Lower Bound</h1>
-<p>Upper bound of an element x is the number which is just greater than x in the array.
+<p>Upper bound of an element x is the number which is just greater than x in the array. <br />
 Lower bound of an element x is the number which is either equal to x or just greater than x in the array.</p>
 <h1 id="implementation-of-upper-bound">Implementation of Upper bound</h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> low <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> high <span class="op">=</span> nums<span class="op">.</span>size<span class="op">()</span> <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> mid <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> index <span class="op">=</span> nums<span class="op">.</span>size<span class="op">();</span></span>
