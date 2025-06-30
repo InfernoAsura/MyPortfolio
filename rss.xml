@@ -7,7 +7,48 @@
         <description><![CDATA[Aditya Mundhara's personal blog]]></description>
         <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Unknown</lastBuildDate>
-        
+        <lastBuildDate>Sun, 30 Jun 2024 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Binary Search</title>
+    <link>https://infernoasura.github.io//posts/2024-06-30-binary-search.html</link>
+    <description><![CDATA[<h1 id="binary-search">Binary Search</h1>
+<p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
+<h1 id="implementation">Implementation</h1>
+<p>nums -&gt; the array itself
+Target -&gt; value to be searched in the array
+n -&gt; size of the array</p>
+<p>Iterative</p>
+<p>’’’
+int low = 0, high = nums.size() - 1, mid = 0;
+while(low &lt;= high){
+mid = (high + low) / 2;
+if (nums[mid] == target) return mid;
+else if(nums[mid] &gt; target) high = mid - 1;
+else low = mid + 1;
+}
+return -1;
+’’’</p>
+<p>Recursive</p>
+<p>’’’
+int binsearch(int low, int high, vector<int> nums, int target){
+if(high &lt; low) return -1;
+int mid = (low + high) / 2;
+if(nums[mid] == target) return mid;
+else if(nums[mid] &gt; target) return binsearch(low, mid - 1, nums, target);
+else return binsearch(mid + 1, high, nums, target);
+}</p>
+<pre><code>int main(){
+    return binsearch(0, n - 1, nums, target);
+}</code></pre>
+<p>’’’</p>
+<p>I have used
+’’’ mid = (low + high) / 2 ’’’
+which is a bad practice. As, the addition of low and high might cause overflow. The good practice is to do this
+’’’ mid = ((high - low) / 2) + low ’’’</p>]]></description>
+    <pubDate>Sun, 30 Jun 2024 00:00:00 UT</pubDate>
+    <guid>https://infernoasura.github.io//posts/2024-06-30-binary-search.html</guid>
+    <dc:creator>Aditya Mundhara</dc:creator>
+</item>
+
     </channel>
 </rss>

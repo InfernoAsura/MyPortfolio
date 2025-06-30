@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>Aditya Mundhara - Contact</title>
+    <title>Aditya Mundhara - Binary Search</title>
 
     <!-- For social icons-->
     <script src="https://kit.fontawesome.com/0c986e42a3.js"></script>
@@ -74,12 +74,50 @@
       <article class="page">
 
         
+        
+        <h1 class="title">Binary Search</h1>
+        
+        
 
         <div class="entry-content">
           
+          <nav id="toc" class="right-toc"></nav>
+          
 
-          <p>Feel free to contact me if you’d like to connect, collaborate, or just have a chat about technology and innovation at this address:
-<a href="mailto:mundhara.aditya5@gmail.com">mundhara.aditya5@gmail.com</a></p>
+          <h1 id="binary-search">Binary Search</h1>
+<p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
+<h1 id="implementation">Implementation</h1>
+<p>nums -&gt; the array itself
+Target -&gt; value to be searched in the array
+n -&gt; size of the array</p>
+<p>Iterative</p>
+<p>’’’
+int low = 0, high = nums.size() - 1, mid = 0;
+while(low &lt;= high){
+mid = (high + low) / 2;
+if (nums[mid] == target) return mid;
+else if(nums[mid] &gt; target) high = mid - 1;
+else low = mid + 1;
+}
+return -1;
+’’’</p>
+<p>Recursive</p>
+<p>’’’
+int binsearch(int low, int high, vector<int> nums, int target){
+if(high &lt; low) return -1;
+int mid = (low + high) / 2;
+if(nums[mid] == target) return mid;
+else if(nums[mid] &gt; target) return binsearch(low, mid - 1, nums, target);
+else return binsearch(mid + 1, high, nums, target);
+}</p>
+<pre><code>int main(){
+    return binsearch(0, n - 1, nums, target);
+}</code></pre>
+<p>’’’</p>
+<p>I have used
+’’’ mid = (low + high) / 2 ’’’
+which is a bad practice. As, the addition of low and high might cause overflow. The good practice is to do this
+’’’ mid = ((high - low) / 2) + low ’’’</p>
         </div>
 
         <!-- 
@@ -89,13 +127,11 @@
         
 
         
-        
             <div class="meta-component">
-                <i class="fas fa-code-branch fa-fw"></i>
-                <a href="https://github.com/InfernoAsura/jeancharles.quillet/tree/01aa306" class="git-commit">
-                    01aa306
-                </a>
+                <i class="far fa-calendar-alt fa-fw"></i>
+                June 30, 2024
             </div>
+        
         
 
         
