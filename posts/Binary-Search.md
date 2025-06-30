@@ -1,3 +1,10 @@
+---
+title: Binary Search
+lastmod: 2025-06-30
+toc: true
+---
+
+
 # Binary Search 
 
 Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array. 
