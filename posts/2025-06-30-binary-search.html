@@ -1,17 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <channel>
-        <title>All posts</title>
-        <link>https://infernoasura.github.io/</link>
-        <description><![CDATA[Aditya Mundhara's personal blog]]></description>
-        <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
-                   type="application/rss+xml" />
-        <lastBuildDate>Mon, 30 Jun 2025 00:00:00 UT</lastBuildDate>
-        <item>
-    <title>Binary Search</title>
-    <link>https://infernoasura.github.io//posts/2025-06-30-binary-search.html</link>
-    <description><![CDATA[<h1 id="binary-search">Binary Search</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Aditya Mundhara - Binary Search</title>
+
+    <!-- For social icons-->
+    <script src="https://kit.fontawesome.com/0c986e42a3.js"></script>
+    <!-- Needed for bundle.min.*.js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Code for the menu, theme and for generating toc -->
+    <script src="../assets/scripts.js"></script>
+
+    <!-- Main fonts for the site -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/haddock.css" rel="stylesheet" type="text/css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-84WVQ2L5VD"></script>
+    <script>
+      if (window.location.hostname !== "localhost") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-84WVQ2L5VD');
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="page-wrapper">
+
+      <header id="header">
+
+        <div id="stamp">
+          <h1 id="name">
+            <a href="../">
+              <span class="emboldened">Aditya Mundhara</span>
+            </a>
+          </h1>
+        </div>
+
+        <nav id="main-nav">
+          <ul class="main">
+            <li><a href="../pages/posts.html">Posts</a></li>
+            <li><a href="../pages/projects.html">Experience</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="../MyPortfolio/images/dark-mode.svg" height="32" width="32" class="theme_btn">
+
+        <div class="mobile-header">
+            <nav id="mobile-nav">
+                <div class="menu"><a class="button">Menu</a>
+                    <div class="container">
+                        <ul class="main">
+                            <li><a href="../pages/posts.html">Posts</a></li>
+                            <li><a href="../pages/projects.html">Experience</a></li>
+                            <li><a href="../pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <img src="../MyPortfolio/images/dark-mode.svg" height="32" width="32" class="theme_btn">
+        </div>
+
+      </header>
+
+      <article class="page">
+
+        
+        
+        <h1 class="title">Binary Search</h1>
+        
+        
+
+        <div class="entry-content">
+          
+          <nav id="toc" class="right-toc"></nav>
+          
+
+          <h1 id="binary-search">Binary Search</h1>
 <p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
 <h1 id="implementation-of-binary-search">Implementation of Binary Search</h1>
 <p>nums -&gt; the array itself
@@ -71,11 +144,51 @@ Lower bound of an element x is the number which is either equal to x or just gre
 <p>CPP STL:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">auto</span> lb <span class="op">=</span> lower_bound<span class="op">(</span>nums<span class="op">.</span>begin<span class="op">(),</span> nums<span class="op">.</span>end<span class="op">(),</span> x<span class="op">);</span> <span class="co">// This will give the iterator pointing at the position of lower bound in array.</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cout <span class="op">&lt;&lt;</span> <span class="op">*</span>lb <span class="op">&lt;&lt;</span> endl<span class="op">;</span> <span class="co">// This will print the element which is lower bound of x</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>cout <span class="op">&lt;&lt;</span> lb <span class="op">-</span> nums<span class="op">.</span>begin<span class="op">()</span> <span class="op">&lt;&lt;</span> endl<span class="op">;</span> <span class="co">// This will give us the index of the element which is lower bound of x</span></span></code></pre></div>]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 UT</pubDate>
-    <guid>https://infernoasura.github.io//posts/2025-06-30-binary-search.html</guid>
-    <dc:creator>Aditya Mundhara</dc:creator>
-</item>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>cout <span class="op">&lt;&lt;</span> lb <span class="op">-</span> nums<span class="op">.</span>begin<span class="op">()</span> <span class="op">&lt;&lt;</span> endl<span class="op">;</span> <span class="co">// This will give us the index of the element which is lower bound of x</span></span></code></pre></div>
+        </div>
 
-    </channel>
-</rss>
+        <!-- 
+          
+        <div class="meta">
+          
+        
+
+        
+            <div class="meta-component">
+                <i class="far fa-calendar-alt fa-fw"></i>
+                June 30, 2025
+            </div>
+        
+        
+
+        
+          
+        </div>
+          
+         -->
+
+      </article>
+
+      <footer id="footer">
+
+        <div id="social">
+          <a href="www.linkedin.com/in/aditya-mundhara-222976256" title="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          ·
+          <a href="https://github.com/InfernoAsura/" title="github">
+            <i class="fab fa-github"></i>
+          </a>
+          ·
+          <a href="mailto:mundhara.aditya5@gmail.com" title="email">
+            <i class="far fa-envelope"></i>
+          </a>
+          ·
+          <a href="https://huggingface.co/InfernoAsura" title="huggingface">🤗</a>
+        </div>
+
+      </footer>
+
+    </div>
+  </body>
+</html>
