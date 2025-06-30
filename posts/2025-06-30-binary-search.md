@@ -5,14 +5,12 @@ toc: true
 ---
 
 
-# Binary Search 
-
 Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array. 
 
 # Implementation of Binary Search
 
-nums -> the array itself
-Target -> value to be searched in the array
+nums -> the array itself <br>
+Target -> value to be searched in the array <br>
 n -> size of the array
 
 
@@ -53,7 +51,7 @@ which is a bad practice. As, the addition of low and high might cause overflow. 
 
 # Upper Bound and Lower Bound 
 
-Upper bound of an element x is the number which is just greater than x in the array.
+Upper bound of an element x is the number which is just greater than x in the array. <br/>
 Lower bound of an element x is the number which is either equal to x or just greater than x in the array.
 
 # Implementation of Upper bound
