@@ -18,7 +18,7 @@ n -> size of the array
 
 Iterative 
 
-``` bash
+``` cpp
 int low = 0, high = nums.size() - 1, mid = 0;
 while(low <= high){
    mid = (high + low) / 2;
@@ -31,7 +31,7 @@ return -1;
 
 Recursive
 
-``` bash
+``` cpp
     int binsearch(int low, int high, vector<int> nums, int target){
         if(high < low) return -1;
         int mid = (low + high) / 2;
@@ -58,7 +58,7 @@ Lower bound of an element x is the number which is either equal to x or just gre
 
 # Implementation of Upper bound
 
-``` bash
+``` cpp
         int low = 0, high = nums.size() - 1, mid = 0, index = nums.size();
         while(low <= high){
             mid = (high - low) / 2 + low;
@@ -69,4 +69,32 @@ Lower bound of an element x is the number which is either equal to x or just gre
             else low = mid + 1;
         }
         return index;
+```
+
+CPP STL:
+``` cpp
+auto ub = upper_bound(nums.begin(), nums.end(), x); // This will give the iterator pointing at the position of upper bound in array.
+cout << *ub << endl; // This will print the element which is upper bound of x
+cout << ub - nums.begin() << endl; // This will give us the index of the element which is upper bound of x
+```
+
+
+# Implementation of Lower bound
+
+``` cpp
+        int low = 0, high = nums.size() - 1, mid = 0, index = nums.size();
+        while(low <= high){
+            mid = (high - low) / 2 + low;
+            if(nums[mid] >= x) {index = mid; high = mid - 1;}
+            else low = mid + 1;
+        }
+        return index;
+```
+
+
+CPP STL:
+``` cpp
+auto lb = lower_bound(nums.begin(), nums.end(), x); // This will give the iterator pointing at the position of lower bound in array.
+cout << *lb << endl; // This will print the element which is lower bound of x
+cout << lb - nums.begin() << endl; // This will give us the index of the element which is lower bound of x
 ```
