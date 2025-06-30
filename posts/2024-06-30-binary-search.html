@@ -86,38 +86,49 @@
 
           <h1 id="binary-search">Binary Search</h1>
 <p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
-<h1 id="implementation">Implementation</h1>
+<h1 id="implementation-of-binary-search">Implementation of Binary Search</h1>
 <p>nums -&gt; the array itself
 Target -&gt; value to be searched in the array
 n -&gt; size of the array</p>
 <p>Iterative</p>
-<p>’’’
-int low = 0, high = nums.size() - 1, mid = 0;
-while(low &lt;= high){
-mid = (high + low) / 2;
-if (nums[mid] == target) return mid;
-else if(nums[mid] &gt; target) high = mid - 1;
-else low = mid + 1;
-}
-return -1;
-’’’</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">int</span> low = 0, high = nums.size<span class="er">(</span><span class="kw">)</span> <span class="ex">-</span> 1, mid = 0<span class="kw">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span><span class="kw">(</span><span class="ex">low</span> <span class="op">&lt;</span>= high<span class="kw">){</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   <span class="ex">mid</span> = <span class="er">(</span><span class="ex">high</span> + low<span class="kw">)</span> <span class="ex">/</span> 2<span class="kw">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="kw">(</span><span class="va">nums</span><span class="op">[</span>mid<span class="op">]</span> <span class="ex">==</span> target<span class="kw">)</span> <span class="cf">return</span> <span class="ex">mid</span><span class="kw">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span> <span class="cf">if</span><span class="kw">(</span><span class="va">nums</span><span class="op">[</span>mid<span class="op">]</span> <span class="op">&gt;</span> target<span class="kw">)</span> <span class="ex">high</span> = mid <span class="at">-</span> 1<span class="kw">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span> <span class="ex">low</span> = mid + 1<span class="kw">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="ex">-1</span><span class="kw">;</span></span></code></pre></div>
 <p>Recursive</p>
-<p>’’’
-int binsearch(int low, int high, vector<int> nums, int target){
-if(high &lt; low) return -1;
-int mid = (low + high) / 2;
-if(nums[mid] == target) return mid;
-else if(nums[mid] &gt; target) return binsearch(low, mid - 1, nums, target);
-else return binsearch(mid + 1, high, nums, target);
-}</p>
-<pre><code>int main(){
-    return binsearch(0, n - 1, nums, target);
-}</code></pre>
-<p>’’’</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">int</span> binsearch<span class="er">(</span><span class="ex">int</span> low, int high, vector<span class="op">&lt;</span>int<span class="op">&gt;</span> nums, int target<span class="kw">){</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="kw">(</span><span class="ex">high</span> <span class="op">&lt;</span> low<span class="kw">)</span> <span class="cf">return</span> <span class="ex">-1</span><span class="kw">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">int</span> mid = <span class="er">(</span><span class="ex">low</span> + high<span class="kw">)</span> <span class="ex">/</span> 2<span class="kw">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="kw">(</span><span class="va">nums</span><span class="op">[</span>mid<span class="op">]</span> <span class="ex">==</span> target<span class="kw">)</span> <span class="cf">return</span> <span class="ex">mid</span><span class="kw">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span><span class="kw">(</span><span class="va">nums</span><span class="op">[</span>mid<span class="op">]</span> <span class="op">&gt;</span> target<span class="kw">)</span> <span class="cf">return</span> <span class="ex">binsearch</span><span class="er">(</span><span class="ex">low,</span> mid <span class="at">-</span> 1, nums, target<span class="kw">);</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">return</span> <span class="ex">binsearch</span><span class="er">(</span><span class="ex">mid</span> + 1, high, nums, target<span class="kw">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">}</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">int</span> main<span class="er">(</span><span class="kw">){</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ex">binsearch</span><span class="er">(</span><span class="ex">0,</span> n <span class="at">-</span> 1, nums, target<span class="kw">);</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">}</span></span></code></pre></div>
 <p>I have used
-’’’ mid = (low + high) / 2 ’’’
+<code>mid = (low + high) / 2</code>
 which is a bad practice. As, the addition of low and high might cause overflow. The good practice is to do this
-’’’ mid = ((high - low) / 2) + low ’’’</p>
+<code>mid = ((high - low) / 2) + low</code></p>
+<h1 id="upper-bound-and-lower-bound">Upper Bound and Lower Bound</h1>
+<p>Upper bound of an element x is the number which is just greater than x in the array.
+Lower bound of an element x is the number which is either equal to x or just greater than x in the array.</p>
+<h1 id="implementation-of-upper-bound">Implementation of Upper bound</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>        <span class="ex">int</span> low = 0, high = nums.size<span class="er">(</span><span class="kw">)</span> <span class="ex">-</span> 1, mid = 0, index = nums.size<span class="er">(</span><span class="kw">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span><span class="kw">(</span><span class="ex">low</span> <span class="op">&lt;</span>= high<span class="kw">){</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="ex">mid</span> = <span class="er">(</span><span class="ex">high</span> <span class="at">-</span> low<span class="kw">)</span> <span class="ex">/</span> 2 + low<span class="kw">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span><span class="kw">(</span><span class="va">nums</span><span class="op">[</span>mid<span class="op">]</span> <span class="op">&gt;</span> x<span class="kw">)</span> <span class="kw">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                <span class="ex">index</span> = mid<span class="kw">;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                <span class="ex">high</span> = mid <span class="at">-</span> 1<span class="kw">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="kw">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="ex">low</span> = mid + 1<span class="kw">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ex">index</span><span class="kw">;</span></span></code></pre></div>
         </div>
 
         <!-- 
