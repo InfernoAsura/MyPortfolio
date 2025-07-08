@@ -7,8 +7,23 @@
         <description><![CDATA[Aditya Mundhara's personal blog]]></description>
         <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 30 Jun 2025 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 08 Jul 2025 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Backend Development</title>
+    <link>https://infernoasura.github.io//posts/2025-07-08-backend-development.html</link>
+    <description><![CDATA[<h2 id="node.js">Node.js</h2>
+<p>Node is a javascript based backend framework. We need to download it from there website. Once downloaded, there are two ways to use node for running javascript code: The node REPL (Read Eval Print Loop) and using the <code>node</code> keyword to run the .js file.</p>
+<p>We type <code>node</code> on the terminal and just like in python, a console type thing will start in the terminal, where we can write javascript code like we write in chrome browser console. Use the .help command to get the commands which can be used in REPL. Now, if we have a index.js file, then type <code>node index.js</code> on the terminal, and the .js file will be executed.</p>
+<h3 id="native-modules">Native modules</h3>
+<p>Node has native modules in it, which can be used directly by us to get things done. For example, if we want to write in a file or read in a file through the .js file, we can use the <code>fs</code> native module. More info can be found on this site: <a href="https://nodejs.org/api/documentation.html">node</a>.</p>
+<h3 id="node-package-manager-npm">Node package manager (npm)</h3>
+<p>This is also like the native modules, except that this is something that is open source and created by other node users. <code>npm</code> comes pre-installed with node. To utilize <code>npm</code>, we have to type the command <code>npm init</code>, and then fill some details and we will see a <code>package.json</code> being created. Go to <a href="https://www.npmjs.com/">npm</a> and we can see the different packages that there are, out in the market. We can use these packages by choosing a package and then installing it.</p>
+<p>There are two ways to use these modules (native and npm modules) in our .js file, one is through CJS (Common Javascript) and the other is ESM (ECMA Script Modules). CJS uses <code>require()</code> while ESM uses <code>import</code>.</p>]]></description>
+    <pubDate>Tue, 08 Jul 2025 00:00:00 UT</pubDate>
+    <guid>https://infernoasura.github.io//posts/2025-07-08-backend-development.html</guid>
+    <dc:creator>Aditya Mundhara</dc:creator>
+</item>
+<item>
     <title>Binary Search</title>
     <link>https://infernoasura.github.io//posts/2025-06-30-binary-search.html</link>
     <description><![CDATA[<p>Binary search is a searching algorithm used on arrays generally. The must condition before applying binary search is that the array must be sorted. The time complexity is O(log n), where n is the size of the array.</p>
