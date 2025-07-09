@@ -1,6 +1,6 @@
 ---
 title: Backend Development
-lastmod: 2025-07-08
+lastmod: 2025-07-09
 toc: true
 ---
 
@@ -20,3 +20,15 @@ Node has native modules in it, which can be used directly by us to get things do
 This is also like the native modules, except that this is something that is open source and created by other node users. `npm` comes pre-installed with node. To utilize `npm`, we have to type the command `npm init`, and then fill some details and we will see a `package.json` being created. Go to [npm](https://www.npmjs.com/) and we can see the different packages that there are, out in the market. We can use these packages by choosing a package and then installing it.  
 
 There are two ways to use these modules (native and npm modules) in our .js file, one is through CJS (Common Javascript) and the other is ESM (ECMA Script Modules). CJS uses `require()` while ESM uses `import`.
+
+## API (Application Programming Interface)
+
+API are set of rules and tools that allow communication between two different softwares. In simplest words, it allows a client (website/app) to interact with a server or a service. 
+
+![](https://voyager.postman.com/illustration/diagram-what-is-an-api-postman-illustration.svg)
+
+
+### Web API & Library API
+
+Web APIs like REST, GraphQL are a set of rules and endpoints that allows different applications to communicate with each other over the internet.  
+Library API like python's Math module, openmp, etc. are a set of functions, directives that allow us to perform specific tasks in our code.
