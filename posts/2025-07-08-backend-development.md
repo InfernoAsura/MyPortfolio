@@ -32,3 +32,11 @@ API are set of rules and tools that allow communication between two different so
 
 Web APIs like REST, GraphQL are a set of rules and endpoints that allows different applications to communicate with each other over the internet.  
 Library API like python's Math module, openmp, etc. are a set of functions, directives that allow us to perform specific tasks in our code.
+
+### Endpoints, Path and Query parameters
+
+So every API has a base url and multiple endpoints. So it is like this, `https://base-url.com/Endpoint`. Now there can different endpoints for different APIs for different functionality.  
+
+Path parameters are part of the URL itself. They’re used to identify a specific resource. `https://base-url.com/Endpoint/path-parameter`. Path parameter can be a unique key for each resource.  
+
+Query parameters are key-value pair added to the end of URL to filter, sort or customize the request. `https://base-url.com/Endpoint?type1=value1&type2=value2`.
