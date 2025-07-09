@@ -24,7 +24,11 @@
 <p><img src="https://voyager.postman.com/illustration/diagram-what-is-an-api-postman-illustration.svg" /></p>
 <h3 id="web-api-library-api">Web API &amp; Library API</h3>
 <p>Web APIs like REST, GraphQL are a set of rules and endpoints that allows different applications to communicate with each other over the internet.<br />
-Library API like python’s Math module, openmp, etc. are a set of functions, directives that allow us to perform specific tasks in our code.</p>]]></description>
+Library API like python’s Math module, openmp, etc. are a set of functions, directives that allow us to perform specific tasks in our code.</p>
+<h3 id="endpoints-path-and-query-parameters">Endpoints, Path and Query parameters</h3>
+<p>So every API has a base url and multiple endpoints. So it is like this, <code>https://base-url.com/Endpoint</code>. Now there can different endpoints for different APIs for different functionality.</p>
+<p>Path parameters are part of the URL itself. They’re used to identify a specific resource. <code>https://base-url.com/Endpoint/path-parameter</code>. Path parameter can be a unique key for each resource.</p>
+<p>Query parameters are key-value pair added to the end of URL to filter, sort or customize the request. <code>https://base-url.com/Endpoint?type1=value1&amp;type2=value2</code>.</p>]]></description>
     <pubDate>Tue, 08 Jul 2025 00:00:00 UT</pubDate>
     <guid>https://infernoasura.github.io//posts/2025-07-08-backend-development.html</guid>
     <dc:creator>Aditya Mundhara</dc:creator>
