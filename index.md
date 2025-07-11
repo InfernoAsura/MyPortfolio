@@ -9,7 +9,7 @@ lastmod: 2024-14-06
 
 Hi there! I'm Aditya Mundhara 👋, a student pursuing my B.Tech. in Artificial Intelligence & Data Science at IIT Jodhpur.
 
-I'm deeply interested in the fascinating world of Computer and want to learn as much as I want. I have a keen interest in fields like development, AI, ML/DL, networking, game development, and hacking. For now, I only have a bit of knowledge in some of the above fields.
+I'm deeply interested in the fascinating world of Computer and want to learn as much as I want. I have a keen interest in fields like development, AI, ML/DL, networking, game development, and hacking. For now, I only have a bit of knowledge in some of the above fields. The posts section is something that I am using specifically to write the concepts that I learn, as I have a habit of forgetting concepts sometime. So they are there to help me remember those concepts and not something intended to help others to learn. 
 
 <!--You'll find my [latest articles](/pages/posts.html) where I write about AI, machine learning, data science, and my academic experiences. I also share information about my [projects](/pages/projects.html) and research work.-->
 
