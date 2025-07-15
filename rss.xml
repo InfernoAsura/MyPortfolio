@@ -9,12 +9,9 @@
                    type="application/rss+xml" />
         <lastBuildDate>Tue, 15 Jul 2025 00:00:00 UT</lastBuildDate>
         <item>
-    <title>2025-07-15-ML</title>
+    <title>Machine Learning</title>
     <link>https://infernoasura.github.io//posts/2025-07-15-ML.html</link>
-    <description><![CDATA[<p>title: Machine Learning
-toc: true</p>
-<hr />
-<h2 id="purity-and-impurity">Purity and Impurity</h2>
+    <description><![CDATA[<h2 id="purity-and-impurity">Purity and Impurity</h2>
 <p>A set of labels is pure if all the labels in that set belong to the same class.<br />
 A set of labels is impure if the labels in that set belong to two or more different classes.</p>
 <h2 id="gini-impurity">Gini Impurity</h2>
