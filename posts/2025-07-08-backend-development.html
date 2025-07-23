@@ -102,6 +102,9 @@ Library API like python’s Math module, openmp, etc. are a set of functions, di
 <p>So every API has a base url and multiple endpoints. So it is like this, <code>https://base-url.com/Endpoint</code>. Now there can different endpoints for different APIs for different functionality.</p>
 <p>Path parameters are part of the URL itself. They’re used to identify a specific resource. <code>https://base-url.com/Endpoint/path-parameter</code>. Path parameter can be a unique key for each resource.</p>
 <p>Query parameters are key-value pair added to the end of URL to filter, sort or customize the request. <code>https://base-url.com/Endpoint?type1=value1&amp;type2=value2</code>.</p>
+<h2 id="authentication">Authentication</h2>
+<h3 id="environment-variables">Environment variables</h3>
+<p>We have variables like database details (name of the database, type of database, password and port etc.) in our code. And we need to hide them when we push our code to github. So we use a <code>.env</code> file (.env is the name of the file), where we use the following format <code>VARNAME=VALUE</code> and store our important data here and then replace the values in the original code with these varnames. <code>dotenv</code> package from npm is used to do this. You import the env from the package in the .js file and write <code>env.config()</code>, and then use <code>process.env.VARNAME</code> to call the value from the .env file. Put the <code>.env</code> file in the <code>.gitignore</code> file while pushing.</p>
         </div>
 
         <!-- 
