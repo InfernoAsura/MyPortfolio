@@ -7,8 +7,16 @@
         <description><![CDATA[Aditya Mundhara's personal blog]]></description>
         <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 15 Jul 2025 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Jul 2025 00:00:00 UT</lastBuildDate>
         <item>
+    <title>2025-07-23-React</title>
+    <link>https://infernoasura.github.io//posts/2025-07-23-React.html</link>
+    <description><![CDATA[]]></description>
+    <pubDate>Wed, 23 Jul 2025 00:00:00 UT</pubDate>
+    <guid>https://infernoasura.github.io//posts/2025-07-23-React.html</guid>
+    <dc:creator>Aditya Mundhara</dc:creator>
+</item>
+<item>
     <title>Machine Learning</title>
     <link>https://infernoasura.github.io//posts/2025-07-15-ML.html</link>
     <description><![CDATA[<h2 id="purity-and-impurity">Purity and Impurity</h2>
