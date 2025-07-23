@@ -1,6 +1,6 @@
 ---
 title: Backend Development
-lastmod: 2025-07-09
+lastmod: 2025-07-23
 toc: true
 ---
 
@@ -45,3 +45,6 @@ Query parameters are key-value pair added to the end of URL to filter, sort or c
 
 ### Environment variables
 We have variables like database details (name of the database, type of database, password and port etc.) in our code. And we need to hide them when we push our code to github. So we use a `.env` file (.env is the name of the file), where we use the following format `VARNAME=VALUE` and store our important data here and then replace the values in the original code with these varnames. `dotenv` package from npm is used to do this. You import the env from the package in the .js file and write `env.config()`, and then use `process.env.VARNAME` to call the value from the .env file. Put the `.env` file in the `.gitignore` file while pushing. 
+
+## Websockets
+A communication protocol allowing persistent, two way connection between the client and server over a single TCP connection. `socket.io` is the npm package used to do this in node.js. 
