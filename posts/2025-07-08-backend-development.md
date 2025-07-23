@@ -40,3 +40,8 @@ So every API has a base url and multiple endpoints. So it is like this, `https:/
 Path parameters are part of the URL itself. They’re used to identify a specific resource. `https://base-url.com/Endpoint/path-parameter`. Path parameter can be a unique key for each resource.  
 
 Query parameters are key-value pair added to the end of URL to filter, sort or customize the request. `https://base-url.com/Endpoint?type1=value1&type2=value2`.
+
+## Authentication
+
+### Environment variables
+We have variables like database details (name of the database, type of database, password and port etc.) in our code. And we need to hide them when we push our code to github. So we use a `.env` file (.env is the name of the file), where we use the following format `VARNAME=VALUE` and store our important data here and then replace the values in the original code with these varnames. `dotenv` package from npm is used to do this. You import the env from the package in the .js file and write `env.config()`, and then use `process.env.VARNAME` to call the value from the .env file. Put the `.env` file in the `.gitignore` file while pushing. 
