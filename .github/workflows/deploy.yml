@@ -32,14 +32,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cabal-
 
-      - name: Update cabal (with fallback if signatures are invalid)
+      - name: Clean and update cabal trust metadata (robust fix)
         run: |
-          echo "Attempting cabal update..."
-          if ! cabal update; then
-            echo "Cabal update failed due to trust issues. Cleaning metadata and retrying..."
-            rm -rf ~/.cabal/packages/hackage.haskell.org
-            cabal update
-          fi
+          echo "🧹 Cleaning Hackage trust metadata..."
+          rm -rf ~/.cabal/packages/hackage.haskell.org
+          echo "🔄 Running cabal update..."
+          cabal update
+
 
       - name: Build and run site
         run: |
