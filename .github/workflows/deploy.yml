@@ -20,7 +20,7 @@ jobs:
         uses: haskell-actions/setup@v2
         with:
           ghc-version: '9.2.7'
-          cabal-version: '3.8.1.0'
+          cabal-version: '3.10.1.0'
 
       - name: Cache cabal packages
         uses: actions/cache@v3
@@ -31,13 +31,6 @@ jobs:
           key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal', 'cabal.project') }}
           restore-keys: |
             ${{ runner.os }}-cabal-
-
-      - name: Clean and update cabal trust metadata (robust fix)
-        run: |
-          echo "🧹 Cleaning Hackage trust metadata..."
-          rm -rf ~/.cabal/packages/hackage.haskell.org
-          echo "🔄 Running cabal update..."
-          cabal update
 
 
       - name: Build and run site
