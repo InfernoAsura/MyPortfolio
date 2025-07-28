@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or master, depending on your default branch name
+      - main
 
 permissions:
   contents: write
@@ -11,6 +11,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,6 +32,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cabal-
 
+      - name: Update cabal (with fallback if signatures are invalid)
+        run: |
+          echo "Attempting cabal update..."
+          if ! cabal update; then
+            echo "Cabal update failed due to trust issues. Cleaning metadata and retrying..."
+            rm -rf ~/.cabal/packages/hackage.haskell.org
+            cabal update
+          fi
+
       - name: Build and run site
         run: |
           cabal build site
@@ -41,4 +51,4 @@ jobs:
         with:
           folder: _site
           branch: gh-pages
-          clean: true 
+          clean: true
