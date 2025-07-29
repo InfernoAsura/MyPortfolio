@@ -7,13 +7,22 @@
         <description><![CDATA[Aditya Mundhara's personal blog]]></description>
         <atom:link href="https://infernoasura.github.io//rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 23 Jul 2025 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Jul 2025 00:00:00 UT</lastBuildDate>
         <item>
-    <title>2025-07-23-React</title>
-    <link>https://infernoasura.github.io//posts/2025-07-23-React.html</link>
-    <description><![CDATA[]]></description>
-    <pubDate>Wed, 23 Jul 2025 00:00:00 UT</pubDate>
-    <guid>https://infernoasura.github.io//posts/2025-07-23-React.html</guid>
+    <title>Sockets</title>
+    <link>https://infernoasura.github.io//posts/2025-07-28-Sockets.html</link>
+    <description><![CDATA[<h2 id="why-do-we-need-http-for-socket.io">Why do we need http for socket.io?</h2>
+<p>So, a socket is basically an upgraded version of the normal HTTP (TCP) connection. Now, it needs to hook to the low level HTTP server to upgrade this one-time tcp connection into a websocket connection. Now, while the normal app.listen() is a wrapper over the HTTP connection, it does not provide the connection with HTTP that the socket.io needs.</p>
+<h2 id="so-we-should-create-a-basic-server-first.">So we should create a basic server first.</h2>
+<p>So we need to create a HTTP server first, then hook that server to the socket.io.
+<code>import {createServer} from 'http'; import {Server} from 'socket.io'; const httpserver = createServer(app); const io = new Server(httpserver);</code></p>
+<p>Now, we have a new socket. Now we need to listen to the incoming connection.
+<code>io.on('connection', (socket) =&gt; {   console.log("user is connected.") })</code></p>
+<p>Now, while we have created a socket.io server, we also need to make sure that a client who opens the website on browser is being able to connect with this server. So, to do that we add the following lines in our .html files.
+<code>&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt; &lt;script&gt;let socket = io();&lt;/script&gt;</code>
+So, when we create a socket.io server, it automatically attaches a special route ‘/socket.io/socket.io.js’ that serves the client library. Now the first line, allows our client to connect to the server and receive or send message through this connection. The second line initiates a websocket connection from the browser to the Socket.IO server.</p>]]></description>
+    <pubDate>Mon, 28 Jul 2025 00:00:00 UT</pubDate>
+    <guid>https://infernoasura.github.io//posts/2025-07-28-Sockets.html</guid>
     <dc:creator>Aditya Mundhara</dc:creator>
 </item>
 <item>
