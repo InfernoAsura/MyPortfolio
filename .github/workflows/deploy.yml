@@ -37,11 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cabal-cleanfix-
 
-      - name: Clean and update Cabal metadata
-        run: |
-          rm -rf ~/.cabal/packages/hackage.haskell.org
-          cabal update
-
       - name: Build and run site
         run: |
           cabal build site
