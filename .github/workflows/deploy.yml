@@ -14,24 +14,33 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Setup Haskell
-        uses: haskell-actions/setup@v2
-        with:
-          ghc-version: '9.2.7'
-          cabal-version: '3.10.1.0'
+      - name: Manually install GHC and Cabal
+        run: |
+          echo "Installing Haskell tools..."
+          curl -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 sh
+          ~/.ghcup/bin/ghcup install ghc 9.2.7
+          ~/.ghcup/bin/ghcup set ghc 9.2.7
+          ~/.ghcup/bin/ghcup install cabal 3.10.1.0
+          ~/.ghcup/bin/ghcup set cabal 3.10.1.0
+          echo "$HOME/.cabal/bin" >> $GITHUB_PATH
+          echo "$HOME/.ghcup/bin" >> $GITHUB_PATH
 
       - name: Cache cabal packages
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cabal/store
             dist-newstyle
-          key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal', 'cabal.project') }}
+          key: ${{ runner.os }}-cabal-cleanfix-${{ hashFiles('**/*.cabal', 'cabal.project') }}
           restore-keys: |
-            ${{ runner.os }}-cabal-
+            ${{ runner.os }}-cabal-cleanfix-
 
+      - name: Clean and update Cabal metadata
+        run: |
+          rm -rf ~/.cabal/packages/hackage.haskell.org
+          cabal update
 
       - name: Build and run site
         run: |
