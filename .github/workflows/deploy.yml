@@ -28,7 +28,7 @@ jobs:
           echo "$HOME/.ghcup/bin" >> $GITHUB_PATH
 
       - name: Cache cabal packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cabal/store
