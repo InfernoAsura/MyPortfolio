@@ -5,6 +5,10 @@ toc: true
 ---
 
 # Sorting
+
+![](https://raw.githubusercontent.com/InfernoAsura/MyPortfolio/refs/heads/main/images/WhatsApp%20Image%202025-09-14%20at%2020.56.58_5ce86541.jpg)
+![](https://raw.githubusercontent.com/InfernoAsura/MyPortfolio/refs/heads/main/images/WhatsApp%20Image%202025-09-14%20at%2020.56.58_791d76f2.jpg)
+
 To do normal sort on vector and strings using CPP STL, below is the code
 ```cpp
 sort(arr.begin(), arr.end());
